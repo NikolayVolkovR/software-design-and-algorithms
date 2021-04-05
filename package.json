@@ -10,7 +10,10 @@
     "test:point": "jest test/Point.spec.ts",
     "test:shape": "jest test/Shape.spec.ts",
     "test:triangle": "jest test/Triangle.spec.ts",
-    "test": "jest"
+    "test": "jest",
+    "point": "ts-node src/Point.ts",
+    "shape": "ts-node src/Shape.ts",
+    "triangle": "ts-node src/Triangle.ts"
   },
   "author": "",
   "license": "ISC",
