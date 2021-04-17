@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "test": "Module 1/test"
+    "test": "Module1/test"
   },
   "scripts": {
     "test:point": "jest Module 1/test/Point.spec.ts",
@@ -13,15 +13,27 @@
     "test": "jest",
     "point": "ts-node Module 1/src/Point.ts",
     "shape": "ts-node Module 1/src/Shape.ts",
-    "triangle": "ts-node Module 1/src/Triangle.ts"
+    "triangle": "ts-node Module 1/src/Triangle.ts",
+    "m2": "ts-node Module2/src/Pizza.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "jest": "^26.4.2",
+    "prettier": "^2.2.1",
     "ts-jest": "^26.4.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-unicorn": "^29.0.0"
   }
 }
