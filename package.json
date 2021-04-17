@@ -4,16 +4,16 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "Module 1/test"
   },
   "scripts": {
-    "test:point": "jest test/Point.spec.ts",
-    "test:shape": "jest test/Shape.spec.ts",
-    "test:triangle": "jest test/Triangle.spec.ts",
+    "test:point": "jest Module 1/test/Point.spec.ts",
+    "test:shape": "jest Module 1/test/Shape.spec.ts",
+    "test:triangle": "jest Module 1/test/Triangle.spec.ts",
     "test": "jest",
-    "point": "ts-node src/Point.ts",
-    "shape": "ts-node src/Shape.ts",
-    "triangle": "ts-node src/Triangle.ts"
+    "point": "ts-node Module 1/src/Point.ts",
+    "shape": "ts-node Module 1/src/Shape.ts",
+    "triangle": "ts-node Module 1/src/Triangle.ts"
   },
   "author": "",
   "license": "ISC",
