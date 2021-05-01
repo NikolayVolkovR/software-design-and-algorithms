@@ -1,39 +1,24 @@
 {
-  "name": "01_oop_and_ood",
+  "name": "02_oop_part_1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "directories": {
-    "test": "Module1/test"
+    "test": "Module3/test"
   },
   "scripts": {
-    "test:point": "jest Module 1/test/Point.spec.ts",
-    "test:shape": "jest Module 1/test/Shape.spec.ts",
-    "test:triangle": "jest Module 1/test/Triangle.spec.ts",
-    "test": "jest",
-    "point": "ts-node Module 1/src/Point.ts",
-    "shape": "ts-node Module 1/src/Shape.ts",
-    "triangle": "ts-node Module 1/src/Triangle.ts",
-    "m2": "ts-node Module2/src/Pizza.ts"
+    "test": "jasmine-ts --config=jasmine.json",
+    "start": "ts-node Module3/src/Comics.ts"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^26.0.14",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "eslint": "^7.24.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "jest": "^26.4.2",
-    "prettier": "^2.2.1",
-    "ts-jest": "^26.4.0",
+    "@types/jasmine": "^3.5.14",
+    "jasmine": "^3.6.1",
+    "jasmine-ts": "^0.3.0",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
-  },
-  "dependencies": {
-    "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-unicorn": "^29.0.0"
+    "typescript": "^3.9.7",
+    "prettier": "^2.2.1"
   }
 }
