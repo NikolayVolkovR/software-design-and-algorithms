@@ -1,7 +1,8 @@
-import { Item } from './Item';
-import { Pages } from './Pages';
-import { Page, PageMaterial, PageType } from './Page';
-import { pagesIterableMixin } from './PagesIterableMixin';
+import {Item} from './Item';
+import {Pages} from './Pages';
+import {Page, PageMaterial, PageType} from './Page';
+import {pagesIterableMixin} from './PagesIterableMixin';
+import {PageFactory, TypeOfPage} from "./PageFactory";
 
 export class Book extends Item {
     _author: string;
@@ -24,10 +25,12 @@ export class Book extends Item {
     }
 }
 
+const pageFactory = PageFactory.getInstance();
+
 const bookPages = new Pages([
-    new Page(1, PageType.Book, PageMaterial.Book),
-    new Page(2, PageType.Book, PageMaterial.Book),
-    new Page(3, PageType.Book, PageMaterial.Book),
+    pageFactory.create(TypeOfPage.Book, 1),
+    pageFactory.create(TypeOfPage.Book, 2),
+    pageFactory.create(TypeOfPage.Book, 3),
 ]);
 
 export const IterableBook = pagesIterableMixin(Book);

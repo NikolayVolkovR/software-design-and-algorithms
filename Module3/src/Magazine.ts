@@ -1,7 +1,8 @@
-import { Item } from './Item';
-import { Pages } from './Pages';
-import { Page, PageMaterial, PageType } from './Page';
-import { pagesIterableMixin } from './PagesIterableMixin';
+import {Item} from './Item';
+import {Pages} from './Pages';
+import {Page, PageMaterial, PageType} from './Page';
+import {pagesIterableMixin} from './PagesIterableMixin';
+import {PageFactory, TypeOfPage} from "./PageFactory";
 
 export class Magazine extends Item {
     constructor(pages: Pages, title: string) {
@@ -13,10 +14,12 @@ export class Magazine extends Item {
     }
 }
 
+const pageFactory = PageFactory.getInstance();
+
 const magazinePages = new Pages([
-    new Page(1, PageType.Magazine, PageMaterial.Magazine),
-    new Page(2, PageType.Magazine, PageMaterial.Magazine),
-    new Page(3, PageType.Magazine, PageMaterial.Magazine),
+    pageFactory.create(TypeOfPage.Magazine, 1),
+    pageFactory.create(TypeOfPage.Magazine, 2),
+    pageFactory.create(TypeOfPage.Magazine, 3),
 ]);
 
 export const IterableMagazine = pagesIterableMixin(Magazine);

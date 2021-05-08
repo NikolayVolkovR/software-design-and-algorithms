@@ -1,7 +1,8 @@
-import { Item } from './Item';
-import { Pages } from './Pages';
-import { Page, PageMaterial, PageType } from './Page';
-import { pagesIterableMixin } from './PagesIterableMixin';
+import {Item} from './Item';
+import {Pages} from './Pages';
+import {Page, PageMaterial, PageType} from './Page';
+import {pagesIterableMixin} from './PagesIterableMixin';
+import {PageFactory, TypeOfPage} from "./PageFactory";
 
 export class Comics extends Item {
     _author: string;
@@ -44,10 +45,12 @@ export class Comics extends Item {
     }
 }
 
+const pageFactory = PageFactory.getInstance();
+
 const comicsPages = new Pages([
-    new Page(1, PageType.Comics, PageMaterial.Comics),
-    new Page(2, PageType.Comics, PageMaterial.Comics),
-    new Page(3, PageType.Comics, PageMaterial.Comics),
+    pageFactory.create(TypeOfPage.Comics,1),
+    pageFactory.create(TypeOfPage.Comics,2),
+    pageFactory.create(TypeOfPage.Comics,3),
 ]);
 
 export const IterableComics = pagesIterableMixin(Comics);
